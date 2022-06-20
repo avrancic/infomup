@@ -1,0 +1,6 @@
+.citySmall{
+    width:200px;
+    height:200px;
+    border-radius:75px;
+    transition: border-radius 2s;
+}
