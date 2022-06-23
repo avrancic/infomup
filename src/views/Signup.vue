@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import * as firebase from "firebase/app";
-import "firebase/auth";
+import { auth } from '../firebase';
+import { createUserWithEmailAndPassword } from '@firebase/auth';
 
 export default {
   data() {
@@ -28,14 +28,12 @@ export default {
   },
   methods: {
     pressed() {
-      firebase
-        .auth()
-        .createUserWithEmailAndPassword(this.email, this.password)
-        .then(() => {
-          console.log("here");
-          this.$router.replace({ name: "Redomat" });
-        })
-        .catch(error => (this.error = error));
+      createUserWithEmailAndPassword(auth, this.email, this.password)
+      .then(() => {
+        console.log("here");
+        this.$router.replace({ name: "Redomat" });
+      })
+      .catch(error => (this.error = error));
     }
   }
 };
