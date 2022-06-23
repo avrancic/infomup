@@ -1,10 +1,15 @@
 <template>
+  <div>
   <nav>
     <router-link to="/">Početna</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/login">Prijavi se</router-link>
   </nav>
- <router-view/>
+  <router-view/>
+  </div>
 </template>
+
+
+
 
 <style lang="scss">
 .cityTitle {
