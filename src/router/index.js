@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
-
-
-
+import PulaInfo from "../views/PulaInfo.vue";
+import RovinjInfo from "../views/RovinjInfo.vue";
+import UmagInfo from "../views/UmagInfo.vue";
+import LabinInfo from "../views/LabinInfo.vue";
+import PazinInfo from "../views/PazinInfo.vue";
+import Redomat from "../views/Redomat.vue";
 
 const routes = [
   {
@@ -18,45 +20,37 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
-  },
-  {
-    path: '/prijava',
-    name: 'prijava',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "prijava" */ '../views/Login.vue')
+    component: Login
   },
   {
     path: '/pula',
     name: 'pula',
-    component: () => import(/* webpackChunkName: "pula" */ '../views/PulaInfo.vue')
+    component: PulaInfo
   },
   {
     path: '/rovinj',
     name: 'rovinj',
-    component: () => import(/* webpackChunkName: "rovinj" */ '../views/RovinjInfo.vue')
+    component: RovinjInfo
   },
   {
     path: '/umag',
     name: 'umag',
-    component: () => import(/* webpackChunkName: "umag" */ '../views/UmagInfo.vue')
+    component: UmagInfo
   },
   {
     path: '/labin',
     name: 'labin',
-    component: () => import(/* webpackChunkName: "labin" */ '../views/LabinInfo.vue')
+    component: LabinInfo
   },
   {
     path: '/pazin',
     name: 'pazin',
-    component: () => import(/* webpackChunkName: "pazin" */ '../views/PazinInfo.vue')
+    component: PazinInfo
   },
   {
     path: '/Redomat',
     name: 'Redomat',
-    component: () => import(/* webpackChunkName: "Redomat" */ '../views/Redomat.vue')
+    component: Redomat
   }  
 ]
 
