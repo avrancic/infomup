@@ -1,7 +1,7 @@
 <template>
   <div class="home">
   <div style = "padding:24px;background-color:lightgray">
-      <h1>Dobrodšli na stranice PU Istarske </h1>
+      <h1>Dobrodošli na stranice PU Istarske </h1>
       <h2>Odaberite svoj grad</h2>
   </div>
 

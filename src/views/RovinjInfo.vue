@@ -1,6 +1,7 @@
 <template>
   <div class="rovinj">
-    <div class = "cityTitle" id  = "RovinjTitle">
+    <div class="cityTitle" id="RovinjTitle">
+      <img class="cityBig" src="../assets/RovinjSmall.png" />
     </div>
 
     <div style = "width:800px; margin: 0  auto;">
