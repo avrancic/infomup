@@ -1,17 +1,65 @@
 <template>
   <div>
-  <nav>
-    <router-link to="/">Početna</router-link> |
-    <router-link to="/login">Prijavi se</router-link>
-  </nav>
-  <router-view/>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <span v-if="showLogout"> 
+        <a @click="signOutClick" href="">Logout</a>
+      </span>
+      <span v-else>
+        <router-link to="/login">Login</router-link>
+      </span>
+    </nav>
+    
+    <router-view></router-view>
   </div>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+import { auth } from './firebase';
+import { onAuthStateChanged, signOut } from '@firebase/auth';
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 
+const showLogout = ref(false)
+
+router.beforeEach((to, from) => {
+  if (to.name == "Login" || to.name == "Redomat") {
+    showLogout.value = true;
+  } else {
+    showLogout.value = false;
+  }
+
+  return true
+})
+
+const signOutClick = () => {
+  signOut(auth);
+  router.push('/');
+}
+</script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eae9e9;
+}
+
+input, select {
+  background: #d9d9d9;
+  border: 0;
+}
+
+button {
+  background: #565050;
+  color: white;
+  border: 0;
+}
+
 .cityTitle {
   padding:24px;
 }
@@ -46,8 +94,8 @@ text-transform: uppercase;
     transition: border-radius 1s;
 }
 .cityBig{
-  width:300px;
-  height:300px;
+  width:200px;
+  height:200px;
   border-radius:100px;
   transition: border-radius 1s;
 }
