@@ -7,7 +7,7 @@
    >[Link na web stranicu kolegija](ntankovic.unipu.hr/pi)
 ### Mentor: doc.dr.sc. Nikola Tanković   
 
->[Link na prototip aplikacije]([https://www.figma.com/proto/i0ml6Bbj01JNzvXwH3YD41/Adempta?node-id=60%3A19&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=60%3A29](https://www.figma.com/proto/llpswzwyqbFf2SzUgKKVev/infoMUP?node-id=2%3A2&starting-point-node-id=2%3A2))
+>[Link na prototip aplikacije](https://www.figma.com/proto/llpswzwyqbFf2SzUgKKVev/infoMUP?node-id=2%3A2&starting-point-node-id=2%3A2)
 
 ### Opis funkcionalnosti: 
 - InfoMUP aplikacija zamišljena je da korisnicima omogućuje sve potrebne informacije o upravnom odjelu Policijske Uprave istarske. Korisnik odabere grad i dobije sve potrebne informacije za svaki pojedini upravni dio. Aplikacija sadrži i redomat koji je trenutno implementiran samo za Policijsku postaju Pula pomoću kojeg korisnici mogu pogledati trenutni redni broj i broj šaltera za svaki pojedini dokument koji njim je potreban
